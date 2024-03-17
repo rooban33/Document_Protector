@@ -2,15 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 
 function SPEED() {
-  const [speed, setSpeed] = useState(null);
+  
   const [fileData, setFileData] = useState(null);
 
-  const handleSpeed = () => {
-    fetch('/speed')
-      .then(response => response.json())
-      .then(data => setSpeed(data.devices[0]))
-      .catch(error => console.error('Error fetching speed:', error));
-  };
+  
 
   useEffect(() => {
     handleSpeed();
